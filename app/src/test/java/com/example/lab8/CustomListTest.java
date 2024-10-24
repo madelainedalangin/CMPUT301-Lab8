@@ -24,7 +24,7 @@ public class CustomListTest {
         assertEquals(expectedCountBeforeAdd, list.getCount(), "Count should be 0.");
         //call AddCity Method
         City cityToAdd = new City("Nanton", "AB");
-        list.add(cityToAdd);
+        list.addCity(cityToAdd);
 
         //check that count of cities increased by one
         int expectedCountAfterAdd = 1;
