@@ -1,6 +1,7 @@
 package com.example.lab8;
 
 
+import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
@@ -29,6 +30,16 @@ public class CustomListTest {
         //check that count of cities increased by one
         int expectedCountAfterAdd = 1;
         assertEquals(expectedCountAfterAdd, list.getCount(), "The city count is now 1");
+    }
+
+    private City mockCity() {
+        return new City("Etobicoke", "ON");
+    }
+
+    @Test
+    public void hasCityTest(){
+        CustomList list = MockCityList();
+        assertTrue(list.hasCity(mockCity()));
     }
 
 }
